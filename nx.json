@@ -23,12 +23,23 @@
     }
   },
   "projects": {
-    "custom-webpack-repro": {
+    "shared-header": {
       "tags": []
     },
-    "custom-webpack-repro-e2e": {
+    "test-app": {
+      "tags": []
+    },
+    "test-app-e2e": {
       "tags": [],
-      "implicitDependencies": ["custom-webpack-repro"]
+      "implicitDependencies": ["test-app"]
     }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
   }
 }
